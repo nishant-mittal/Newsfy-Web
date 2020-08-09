@@ -1,0 +1,17 @@
+.articles {
+  display: grid;
+  grid-template-columns: repeat(5, 230px);
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .articles {
+    grid-template-columns: repeat(auto-fit, 230px);
+  }
+
+  .article-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,27 @@
+.covid {
+  border-radius: 15px;
+  border: 1px solid rgba(235, 85, 105, 0.1);
+  /* box-shadow: 1px 1px 5px rgba(235, 85, 105, 0.1); */
+  display: flex;
+  flex-direction: column;
+  margin: 0.8em;
+  width: 50%;
+}
+
+.covid p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.case {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0.4em;
+}
+
+.case p {
+  font-weight: normal;
+}

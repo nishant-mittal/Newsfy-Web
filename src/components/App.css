@@ -1,0 +1,30 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+.info-cards {
+  width: 90vw;
+  margin-top: 0.8em;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 720px) {
+  .info-cards {
+    flex-direction: column;
+    width: 100vw;
+  }
+}

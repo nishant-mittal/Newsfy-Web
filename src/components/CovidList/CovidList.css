@@ -1,0 +1,26 @@
+.covid-list {
+  display: inline-block;
+  width: 420px;
+  height: 220px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+}
+
+.covid-list h2 {
+  font-size: 1.1rem;
+  margin: 0.8em 0 0.2em 0.8em;
+  font-weight: 500;
+}
+
+.covid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 720px) {
+  .covid-list {
+    margin-left: 0;
+  }
+}

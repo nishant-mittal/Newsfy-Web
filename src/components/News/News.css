@@ -1,0 +1,14 @@
+.news h2 {
+  width: 90vw;
+  color: red;
+}
+
+@media (max-width: 720px) {
+  .news h2 {
+    width: 100vw;
+  }
+
+  .news {
+    width: 100vw;
+  }
+}

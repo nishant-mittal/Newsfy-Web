@@ -1,0 +1,31 @@
+.input-container input {
+  border: none;
+  width: 40vw;
+  font-family: inherit;
+  margin-left: 0.2em;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 0.3em;
+}
+
+.search form {
+  display: inline-block;
+}
+
+.search i {
+  color: red;
+  padding-right: 0.5em;
+}
