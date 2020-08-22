@@ -17,14 +17,27 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
+    //   const fetchData = async () => {
+    //     const data = await axios.get(
+    //       `https://newsapi.org/v2/everything?q=${searchTerm}`,
+    //       {
+    //         params: {
+    //           apiKey: "bef75161a87c4cf199c1c342e6dbb452",
+    //         },
+    //       }
+    //     );
+
+    //     setNewsData(data.data.articles);
+
+    //     setRenderNews(true);
+    //   };
+
+    //   fetchData();
+    // }, [searchTerm]);
+
     const fetchData = async () => {
       const data = await axios.get(
-        `https://newsapi.org/v2/everything?q=${searchTerm}`,
-        {
-          params: {
-            apiKey: "bef75161a87c4cf199c1c342e6dbb452",
-          },
-        }
+        `https://boiling-hollows-68502.herokuapp.com/news/${searchTerm}`
       );
 
       setNewsData(data.data.articles);
@@ -62,12 +75,12 @@ const App = () => {
           )}
         />
 
-        {/* <Route
+        <Route
           path="/"
           exact
           component={() => <NewsList location={location.country_code} />}
-        /> */}
-        <NewsList location={location.country_code} />
+        />
+        {/* <NewsList location={location.country_code} /> */}
       </div>
     </Router>
   );

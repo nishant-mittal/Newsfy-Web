@@ -9,12 +9,14 @@ const News = ({ url, title }) => {
   useEffect(() => {
     axios
       .get(url, {
-        params: {
-          apiKey: "bef75161a87c4cf199c1c342e6dbb452",
-        },
+        // params: {
+        //   apiKey: "bef75161a87c4cf199c1c342e6dbb452",
+        // },
       })
       .then((res) => {
+        console.log(res);
         setNewsData(res.data.articles);
+        //setNewsData(res);
       });
   }, [url]);
 

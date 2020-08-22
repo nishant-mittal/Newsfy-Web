@@ -9,8 +9,8 @@ const Search = ({ setSearchTerm, setRenderNews }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
     //history.push(`/${term}`);
-    history.push(`/search`);
     setSearchTerm(term);
+    history.push("/search");
   };
 
   return (
