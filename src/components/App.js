@@ -7,7 +7,8 @@ import ArticleList from "./ArticleList/ArticleList";
 import Weather from "./Weather/Weather";
 import useLocation from "./hooks/useLocation";
 import CovidList from "./CovidList/CovidList";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "../history";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -35,7 +36,7 @@ const App = () => {
   }, [searchTerm]);
 
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <div className="app">
         <Header setSearchTerm={setSearchTerm} />
         <div className="info-cards">
@@ -67,7 +68,7 @@ const App = () => {
           component={() => <NewsList location={location.country_code} />}
         />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 

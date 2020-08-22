@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import history from "../../history";
 import "./Search.css";
 
 const Search = ({ setSearchTerm, setRenderNews }) => {
   const [term, setTerm] = useState("");
-  const history = useHistory();
 
   const onFormSubmit = (e) => {
     e.preventDefault();
