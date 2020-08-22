@@ -62,11 +62,12 @@ const App = () => {
           )}
         />
 
-        <Route
+        {/* <Route
           path="/"
           exact
           component={() => <NewsList location={location.country_code} />}
-        />
+        /> */}
+        <NewsList location={location.country_code} />
       </div>
     </Router>
   );
