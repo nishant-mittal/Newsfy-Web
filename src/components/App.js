@@ -7,7 +7,8 @@ import ArticleList from "./ArticleList/ArticleList";
 import Weather from "./Weather/Weather";
 import useLocation from "./hooks/useLocation";
 import CovidList from "./CovidList/CovidList";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "../history";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,14 +17,27 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
+    //   const fetchData = async () => {
+    //     const data = await axios.get(
+    //       `https://newsapi.org/v2/everything?q=${searchTerm}`,
+    //       {
+    //         params: {
+    //           apiKey: "bef75161a87c4cf199c1c342e6dbb452",
+    //         },
+    //       }
+    //     );
+
+    //     setNewsData(data.data.articles);
+
+    //     setRenderNews(true);
+    //   };
+
+    //   fetchData();
+    // }, [searchTerm]);
+
     const fetchData = async () => {
       const data = await axios.get(
-        `https://newsapi.org/v2/everything?q=${searchTerm}`,
-        {
-          params: {
-            apiKey: "bef75161a87c4cf199c1c342e6dbb452",
-          },
-        }
+        `https://boiling-hollows-68502.herokuapp.com/news/${searchTerm}`
       );
 
       setNewsData(data.data.articles);
@@ -35,7 +49,7 @@ const App = () => {
   }, [searchTerm]);
 
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <div className="app">
         <Header setSearchTerm={setSearchTerm} />
         <div className="info-cards">
@@ -66,8 +80,9 @@ const App = () => {
           exact
           component={() => <NewsList location={location.country_code} />}
         />
+        {/* <NewsList location={location.country_code} /> */}
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 
