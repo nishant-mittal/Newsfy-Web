@@ -71,7 +71,7 @@ const Weather = ({ lat, lon }) => {
       .then((res) => {
         setdata(res.data);
         setLoad(true);
-      });
+      }).catch((err) => {console.log(err)})
   }, [lat, lon]);
 
   return load ? (
