@@ -22,7 +22,7 @@ const News = ({ url, title }) => {
 
   return newsData.length > 0 ? (
     <div className="news">
-      <h2 style={{ margin: "0.8em 0" }}>{title}</h2>
+      <h2 style={{ margin: "0.8em 0",fontSize: "1.7rem" }}>{title}</h2>
       <ArticleList newsData={newsData} />
     </div>
   ) : null;

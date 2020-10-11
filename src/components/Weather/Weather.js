@@ -87,7 +87,7 @@ const Weather = ({ lat, lon }) => {
         <div className="weather-details">
           <h2>
             {Math.round(data.main.temp)}{" "}
-            <span style={{ color: "#787878" }}>&#8451;</span>
+            <span style={{ color: "#787878" }}>&#730;C</span>
           </h2>
           <p>{data.weather[0].description}</p>
           <p style={{ opacity: "0.6" }}>{data.name}</p>

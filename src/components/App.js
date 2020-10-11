@@ -68,7 +68,7 @@ const App = () => {
               }}
             >
               <h2
-                style={{ width: "90vw", color: "red", margin: "0.8em 0" }}
+                style={{ width: "95vw", color: "red", margin: "0.8em 0" }}
               >{`Results for ${searchTerm}`}</h2>
               {renderNews ? <ArticleList newsData={newsData} /> : null}
             </div>
