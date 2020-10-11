@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  zoom: 90%;
 }
 
 p,
@@ -16,7 +17,8 @@ h2 {
 }
 
 .info-cards {
-  width: 90vw;
+  /* width: 90vw; */
+  width: 95vw;
   margin-top: 0.8em;
   display: flex;
   flex-direction: row;

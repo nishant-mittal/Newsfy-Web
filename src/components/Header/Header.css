@@ -8,6 +8,7 @@
 .header-component {
   display: flex;
   flex-direction: row;
-  width: 90vw;
+  /* width: 95vw; changed this */
+  width: 95vw;
   margin: 0 auto;
 }
