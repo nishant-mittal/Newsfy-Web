@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ArticleList from "../ArticleList/ArticleList";
+import Loading from '../Loading/Loading';
 import "./News.css";
 
 const News = ({ url, title }) => {
   const [newsData, setNewsData] = useState([]);
-
   useEffect(() => {
     axios
       .get(url, {
@@ -16,16 +16,17 @@ const News = ({ url, title }) => {
       .then((res) => {
         console.log(res);
         setNewsData(res.data.articles);
+        
         //setNewsData(res);
       });
   }, [url]);
 
-  return newsData.length > 0 ? (
+  return (
     <div className="news">
       <h2 style={{ margin: "0.8em 0",fontSize: "1.7rem" }}>{title}</h2>
-      <ArticleList newsData={newsData} />
+      {newsData.length > 0 ? (<ArticleList newsData={newsData} />) : <Loading/>}
     </div>
-  ) : null;
+  ) 
 };
 
 export default News;

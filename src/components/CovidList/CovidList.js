@@ -19,7 +19,7 @@ const CovidList = ({ location }) => {
 
   return countryData ? (
     <div className="covid-list">
-      <h2>{`COVID-19 cases in ${location.country_name}`}</h2>
+       <h2>{`COVID-19 cases in ${location.country_name}`}</h2>
       <div className="covid-container">
         <Covid title="Today" data={countryData} type="New" />
         <Covid title="Total" data={countryData} type="Total" />

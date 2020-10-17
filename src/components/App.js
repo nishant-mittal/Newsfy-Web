@@ -7,6 +7,7 @@ import ArticleList from "./ArticleList/ArticleList";
 import Weather from "./Weather/Weather";
 import useLocation from "./hooks/useLocation";
 import CovidList from "./CovidList/CovidList";
+import Loading from './Loading/Loading';
 import { Router, Route } from "react-router-dom";
 import history from "../history";
 
@@ -70,7 +71,7 @@ const App = () => {
               <h2
                 style={{ width: "95vw", color: "red", margin: "0.8em 0" }}
               >{`Results for ${searchTerm}`}</h2>
-              {renderNews ? <ArticleList newsData={newsData} /> : null}
+              {renderNews ? <ArticleList newsData={newsData} /> : <Loading/>}
             </div>
           )}
         />

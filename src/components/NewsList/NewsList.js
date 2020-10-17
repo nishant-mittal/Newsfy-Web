@@ -1,7 +1,8 @@
-import React from "react";
+import React,{ useState} from "react";
 import News from "../News/News";
 
 const NewsList = ({ location }) => {
+
   return (
     <div>
       {/* <News
