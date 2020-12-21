@@ -1,6 +1,9 @@
 .news h2 {
-  width: 90vw;
   color: red;
+}
+
+.news {
+  width: 95vw;
 }
 
 @media (max-width: 720px) {

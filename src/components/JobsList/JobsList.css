@@ -1,0 +1,9 @@
+#jobsList {
+  width: 95vw;
+}
+
+#jobsHeader {
+  margin: 0.8em 0;
+  font-size: 1.7rem;
+  color: red;
+}

@@ -1,0 +1,50 @@
+.job {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+
+.job-title {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-size: 1.3rem;
+  padding-left: 18px;
+  font-weight: 500;
+}
+
+.job-name {
+  margin: 0.5em 0;
+  padding-left: 18px;
+  font-size: 1.1rem;
+}
+
+.job-location {
+  margin-top: 0.4em;
+  margin-bottom: 1.2em;
+  padding-left: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.job-apply {
+  background-color: #e84118;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 15px;
+  padding: 8px 12px;
+}
+
+.job-apply:hover {
+  background-color: #962c11;
+}
+
+.job-date {
+  margin-top: 1.4em;
+  margin-bottom: 1.2em;
+  padding-left: 18px;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
