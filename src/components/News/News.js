@@ -7,23 +7,23 @@ import "./News.css";
 const News = ({ url, title }) => {
   const [newsData, setNewsData] = useState([]);
   useEffect(() => {
-    axios
-      .get(url, {
-        // params: {
-        //   apiKey: "bef75161a87c4cf199c1c342e6dbb452",
-        // },
-      })
-      .then((res) => {
-        setNewsData(res.data.articles);
-
-        //setNewsData(res);
-      });
+    axios.get(url, {}).then((res) => {
+      setNewsData(res.data.articles);
+    });
   }, [url]);
 
   return (
     <div className="news">
       <h2 style={{ margin: "0.8em 0", fontSize: "1.7rem" }}>{title}</h2>
-      {newsData != null ? <ArticleList newsData={newsData} /> : <Loading />}
+      {newsData != null ? (
+        newsData.length > 0 ? (
+          <ArticleList newsData={newsData} />
+        ) : (
+          <Loading />
+        )
+      ) : (
+        <p style={{ textAlign: "center" }}>Could not load news :(</p>
+      )}
     </div>
   );
 };
